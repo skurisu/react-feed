@@ -6,6 +6,7 @@ class Main extends React.Component {
     return (
       <div>
         <h1>Hello World!</h1>
+        <h1>Goodbye World!</h1>
       </div>
     );
   }
