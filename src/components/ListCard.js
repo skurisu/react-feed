@@ -28,11 +28,19 @@ class ListCard extends React.Component {
     return (
       <div className="row">
         <div className="col-sm-6">
-          <div className="card card-block card-outline-secondary">
-            <h2 className="card-title">ListCard Component</h2>
-            <p className="card-text">{t}</p>
-            {/*<ListCardText text={this.state.everything} />*/}
-          </div>
+          {this.state.everything.map((data, index) => {
+            return (
+              <div key={index}>
+                <a href={data.link} target="_blank">
+                  <div className="card card-block card-outline-secondary">
+                    <h4 className="card-title">{data.title}</h4>
+                    <p className="card-text">{data.contentSnippet}</p>
+                    <p className="card-text">By {data.author}</p>
+                  </div>
+                </a>
+              </div>
+            )
+          })}
         </div>
       </div>
     )
