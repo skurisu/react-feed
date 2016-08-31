@@ -16,7 +16,10 @@ class Main extends React.Component {
     this.init()
   }
   init(){
-    getFeed()
+    var search = document.location.search;
+    var myNum = search.split("=").pop();
+
+    getFeed(myNum)
       .then(function(data) {
         console.log(data);
         this.setState({
