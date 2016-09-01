@@ -29,7 +29,8 @@ class Main extends React.Component {
   }
   handleClick(article){
     this.setState({
-      content: article.content
+      content: article.content,
+      title: article.title
     })
   }
   render() {
@@ -37,7 +38,7 @@ class Main extends React.Component {
       <div>
         <div className="container">
           <ListCard articles={this.state.articles} onArticleClick={this.handleClick.bind(this)}/>
-          <BlogContent content={this.state.content}/>
+          <BlogContent content={this.state.content} title={this.state.title}/>
         </div>
       </div>
     );

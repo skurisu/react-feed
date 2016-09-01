@@ -30,7 +30,7 @@ class ListCard extends React.Component {
 
   render(){
     return (
-        <div className="col-sm-6">
+        <div className="col-sm-4">
           <div>
             {this.props.articles.map((article, index) => {
               return (
