@@ -1,4 +1,5 @@
 import React from 'react';
+require('../main.css');
 
 
 // const ListCard = ({articles}) => {
@@ -30,7 +31,7 @@ class ListCard extends React.Component {
 
   render(){
     return (
-        <div className="col-sm-6">
+        <div className="col-sm-4">
           <div>
             {this.props.articles.map((article, index) => {
               return (
@@ -38,7 +39,7 @@ class ListCard extends React.Component {
                   <div href={article.link} target="_blank" onClick={this.action.bind(this,article)}>
                     <div className="card card-block card-outline-secondary">
                       <h4 className="card-title">{article.title}</h4>
-                      <p className="card-text">{article.contentSnippet}</p>
+                      <p className="card-text red">{article.contentSnippet}</p>
                       <p className="card-text">By {article.author}</p>
                     </div>
                   </div>
